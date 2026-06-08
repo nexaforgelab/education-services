@@ -1,0 +1,26 @@
+{
+  "name": "subject-english",
+  "version": "0.1.0",
+  "description": "英语科目 vertical plugin：词汇、语法、阅读、写作、误区诊断、听力、应用题。",
+  "author": {
+    "name": "Education Services Team",
+    "email": "team@education-services.local"
+  },
+  "homepage": "../../../README.md",
+  "license": "Apache-2.0",
+  "keywords": [
+    "education",
+    "subject",
+    "english",
+    "英语"
+  ],
+  "skills": [
+    "./skills/english-vocabulary-builder/SKILL.md",
+    "./skills/english-grammar-explainer/SKILL.md",
+    "./skills/english-reading-strategies/SKILL.md",
+    "./skills/english-writing-rubric/SKILL.md",
+    "./skills/english-misconception-diagnoser/SKILL.md",
+    "./skills/english-listening-script/SKILL.md",
+    "./skills/english-word-problem-builder/SKILL.md"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "name": "parent-coach-agent",
+  "version": "0.1.0",
+  "description": "家长陪学 Agent。把教材语言、教研语言翻译成家长能听懂、能讲给孩子听的话；提供家庭辅导脚本、激励话术、复习计划。",
+  "author": {
+    "name": "Education Services Team",
+    "email": "team@education-services.local"
+  },
+  "homepage": "../../../README.md",
+  "license": "Apache-2.0",
+  "keywords": [
+    "education",
+    "parent",
+    "coaching",
+    "home-learning",
+    "家庭辅导"
+  ],
+  "agents": [
+    "./agents/parent-coach-agent.md"
+  ],
+  "depends_on": [
+    "../../agent-plugins/textbook-teaching-agent",
+    "../../vertical-plugins/education-core",
+    "../../vertical-plugins/parent-workflow"
+  ]
+}

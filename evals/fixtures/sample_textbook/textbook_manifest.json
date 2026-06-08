@@ -1,0 +1,54 @@
+{
+  "textbook_id": "math_g7_vol1_pep_2024",
+  "title": "数学 七年级 上册",
+  "subject": "math",
+  "grade": "7",
+  "version": "人教版",
+  "publisher": "人民教育出版社",
+  "edition_year": 2024,
+  "total_pages": 156,
+  "file_hash": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
+  "ingested_at": "2026-06-07T10:00:00Z",
+  "chapters": [
+    {
+      "chapter_id": "ch01",
+      "title": "有理数",
+      "page_start": 1,
+      "page_end": 38,
+      "sections": [
+        {
+          "section_id": "ch01_s01",
+          "title": "正数和负数",
+          "pages": [2, 3, 4],
+          "concepts": ["正数", "负数", "0", "相反意义的量"]
+        },
+        {
+          "section_id": "ch01_s02",
+          "title": "有理数",
+          "pages": [5, 6, 7]
+        },
+        {
+          "section_id": "ch01_s03",
+          "title": "数轴",
+          "pages": [8, 9, 10, 11]
+        },
+        {
+          "section_id": "ch01_s04",
+          "title": "绝对值",
+          "pages": [12, 13, 14]
+        },
+        {
+          "section_id": "ch01_s05",
+          "title": "有理数的加减法",
+          "pages": [15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25]
+        }
+      ]
+    },
+    {
+      "chapter_id": "ch02",
+      "title": "整式的加减",
+      "page_start": 39,
+      "page_end": 80
+    }
+  ]
+}

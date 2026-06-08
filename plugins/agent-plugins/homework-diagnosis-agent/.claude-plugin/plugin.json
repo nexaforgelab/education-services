@@ -1,0 +1,26 @@
+{
+  "name": "homework-diagnosis-agent",
+  "version": "0.1.0",
+  "description": "作业诊断 Agent。接收学生作业图片/PDF/文字，输出错因分类、补救讲解、变式题、复习建议。同时支持教师版和家长版报告。",
+  "author": {
+    "name": "Education Services Team",
+    "email": "team@education-services.local"
+  },
+  "homepage": "../../../README.md",
+  "license": "Apache-2.0",
+  "keywords": [
+    "education",
+    "homework",
+    "diagnosis",
+    "misconception",
+    "批改"
+  ],
+  "agents": [
+    "./agents/homework-diagnosis-agent.md"
+  ],
+  "depends_on": [
+    "../../agent-plugins/textbook-teaching-agent",
+    "../../vertical-plugins/education-core",
+    "../../vertical-plugins/subject-math"
+  ]
+}

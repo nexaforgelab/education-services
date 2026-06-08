@@ -1,0 +1,41 @@
+{
+  "student_id": "stu_001",
+  "name": "小明",
+  "grade": "7",
+  "school": "示范中学",
+  "parent_id": "parent_001",
+  "subjects": ["math", "chinese", "english", "science"],
+  "recent_homework": [
+    {
+      "homework_id": "hw_001",
+      "chapter_id": "ch01_s05",
+      "score": 60,
+      "wrong_count": 3,
+      "submitted_at": "2026-06-07T08:00:00Z"
+    }
+  ],
+  "mastery_map": {
+    "ch01_s01": 0.95,
+    "ch01_s02": 0.90,
+    "ch01_s03": 0.85,
+    "ch01_s04": 0.80,
+    "ch01_s05": 0.60
+  },
+  "misconceptions": [
+    {
+      "id": "MIS-MATH-7-001",
+      "description": "减法化加法时忘记变号",
+      "frequency": 3,
+      "last_seen": "2026-06-07"
+    },
+    {
+      "id": "MIS-MATH-7-002",
+      "description": "幂的符号判断错误",
+      "frequency": 1,
+      "last_seen": "2026-06-07"
+    }
+  ],
+  "strengths": ["正负数概念清晰", "数轴理解扎实"],
+  "growth_areas": ["符号变换", "混合运算顺序"],
+  "notes": "学习态度认真，需要在符号变换方面加强练习"
+}

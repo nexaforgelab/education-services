@@ -1,0 +1,28 @@
+{
+  "name": "subject-science",
+  "version": "0.1.0",
+  "description": "科学/物理/化学科目 vertical plugin：概念解释、实验指南、误区库、公式应用、图表解读。",
+  "author": {
+    "name": "Education Services Team",
+    "email": "team@education-services.local"
+  },
+  "homepage": "../../../README.md",
+  "license": "Apache-2.0",
+  "keywords": [
+    "education",
+    "subject",
+    "science",
+    "physics",
+    "chemistry",
+    "科学",
+    "物理",
+    "化学"
+  ],
+  "skills": [
+    "./skills/science-concept-explainer/SKILL.md",
+    "./skills/science-experiment-guide/SKILL.md",
+    "./skills/science-misconception-diagnoser/SKILL.md",
+    "./skills/science-formula-applier/SKILL.md",
+    "./skills/science-diagram-interpreter/SKILL.md"
+  ]
+}

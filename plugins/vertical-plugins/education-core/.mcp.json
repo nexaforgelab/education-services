@@ -1,0 +1,29 @@
+{
+  "mcpServers": {
+    "textbook_store": {
+      "type": "url",
+      "url": "${TEXTBOOK_MCP_URL}",
+      "description": "教材 PDF、页码、章节索引、原文"
+    },
+    "vector_index": {
+      "type": "url",
+      "url": "${VECTOR_INDEX_MCP_URL}",
+      "description": "教材向量检索、知识点检索"
+    },
+    "student_profile": {
+      "type": "url",
+      "url": "${STUDENT_PROFILE_MCP_URL}",
+      "description": "学生画像、错题本、掌握度"
+    },
+    "homework_store": {
+      "type": "url",
+      "url": "${HOMEWORK_STORE_MCP_URL}",
+      "description": "作业图片、答案、批改记录"
+    },
+    "question_bank": {
+      "type": "url",
+      "url": "${QUESTION_BANK_MCP_URL}",
+      "description": "题库、组卷、难度标签"
+    }
+  }
+}

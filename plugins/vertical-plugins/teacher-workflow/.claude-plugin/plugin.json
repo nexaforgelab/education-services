@@ -1,0 +1,32 @@
+{
+  "name": "teacher-workflow",
+  "version": "0.1.0",
+  "description": "教师工作流 vertical plugin：教案、课堂提问、板书、小测、批改、试卷分析、分层教学、家校沟通、项目式作业、课堂管理、教学反思。",
+  "author": {
+    "name": "Education Services Team",
+    "email": "team@education-services.local"
+  },
+  "homepage": "../../../README.md",
+  "license": "Apache-2.0",
+  "keywords": [
+    "education",
+    "teacher",
+    "workflow",
+    "lesson",
+    "classroom"
+  ],
+  "skills": [
+    "./skills/classroom-lesson-plan/SKILL.md",
+    "./skills/classroom-question-designer/SKILL.md",
+    "./skills/blackboard-design/SKILL.md",
+    "./skills/quiz-generator/SKILL.md",
+    "./skills/grading-rubric/SKILL.md",
+    "./skills/exam-paper-analysis/SKILL.md",
+    "./skills/differentiated-instruction/SKILL.md",
+    "./skills/parent-teacher-comm/SKILL.md",
+    "./skills/project-based-homework/SKILL.md",
+    "./skills/exam-deep-analysis/SKILL.md",
+    "./skills/classroom-management-tips/SKILL.md",
+    "./skills/teaching-reflection-log/SKILL.md"
+  ]
+}

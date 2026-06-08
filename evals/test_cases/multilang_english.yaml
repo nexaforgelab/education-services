@@ -1,0 +1,29 @@
+id: multilang_english_output
+name: 英文输出测试
+description: |
+  测试 Agent 在英文请求下的输出能力。
+  场景：用户用英文询问数学概念。
+
+category: multilang
+fixture: evals/fixtures/sample_outputs/english_explanation.md
+
+input:
+  user_role: teacher
+  command: /explain-to-parent
+  args: ["rational numbers addition"]
+  language: en
+
+expected:
+  must_contain:
+    - "rational"  # 关键词
+    - "page"  # 引用页码
+  must_not_contain:
+    - "教材上明确说"  # 不应出现
+
+checks:
+  check_citation: true
+  check_no_unsourced: true
+  check_no_personal_judgments: true
+  check_no_direct_cheating: true
+
+severity: low

@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 💬 Community Discussions
+    url: https://github.com/education-services/education-services/discussions
+    about: Ask questions, share ideas, and discuss with the community
+  - name: 📖 Documentation
+    url: https://github.com/education-services/education-services/tree/main/docs
+    about: Read the documentation
+  - name: 🔒 Security Advisories
+    url: https://github.com/education-services/education-services/security/advisories
+    about: Privately report security vulnerabilities

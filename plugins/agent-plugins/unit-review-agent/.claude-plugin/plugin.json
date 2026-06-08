@@ -1,0 +1,24 @@
+{
+  "name": "unit-review-agent",
+  "version": "0.1.0",
+  "description": "单元复习 Agent。从教材一个单元或多个章节生成复习资料：知识网络、高频考点、易错点、分层测试、复习清单、考前计划。",
+  "author": {
+    "name": "Education Services Team",
+    "email": "team@education-services.local"
+  },
+  "homepage": "../../../README.md",
+  "license": "Apache-2.0",
+  "keywords": [
+    "education",
+    "unit-review",
+    "exam-prep",
+    "单元复习"
+  ],
+  "agents": [
+    "./agents/unit-review-agent.md"
+  ],
+  "depends_on": [
+    "../../agent-plugins/textbook-teaching-agent",
+    "../../vertical-plugins/education-core"
+  ]
+}

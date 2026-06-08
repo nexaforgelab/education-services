@@ -1,0 +1,38 @@
+{
+  "name": "education-core",
+  "version": "0.1.0",
+  "description": "教育核心 vertical plugin：通用教材解析、知识图谱、引用政策、安全护栏、学生画像。被所有 Agent 和其他 vertical plugin 依赖。",
+  "author": {
+    "name": "Education Services Team",
+    "email": "team@education-services.local"
+  },
+  "homepage": "../../../README.md",
+  "license": "Apache-2.0",
+  "keywords": [
+    "education",
+    "core",
+    "curriculum",
+    "citation",
+    "safety"
+  ],
+  "skills": [
+    "./skills/textbook-ingestion/SKILL.md",
+    "./skills/knowledge-graph-builder/SKILL.md",
+    "./skills/pedagogy-method/SKILL.md",
+    "./skills/citation-policy/SKILL.md",
+    "./skills/safety-policy/SKILL.md",
+    "./skills/learning-profile/SKILL.md"
+  ],
+  "commands": [
+    "./commands/ingest-textbook.md",
+    "./commands/lesson-plan.md",
+    "./commands/explain-to-parent.md",
+    "./commands/diagnose-homework.md",
+    "./commands/worksheet.md",
+    "./commands/unit-review.md",
+    "./commands/parent-report.md"
+  ],
+  "mcp_servers": [
+    "./.mcp.json"
+  ]
+}

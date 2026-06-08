@@ -1,0 +1,25 @@
+{
+  "name": "subject-chinese",
+  "version": "0.1.0",
+  "description": "语文科目 vertical plugin：古诗文阅读、现代文阅读、写作、字词、作文支架。",
+  "author": {
+    "name": "Education Services Team",
+    "email": "team@education-services.local"
+  },
+  "homepage": "../../../README.md",
+  "license": "Apache-2.0",
+  "keywords": [
+    "education",
+    "subject",
+    "chinese",
+    "语文"
+  ],
+  "skills": [
+    "./skills/chinese-classical-reading/SKILL.md",
+    "./skills/chinese-modern-reading-comprehension/SKILL.md",
+    "./skills/chinese-writing-rubric/SKILL.md",
+    "./skills/chinese-character-lexicon/SKILL.md",
+    "./skills/chinese-poetry-appreciation/SKILL.md",
+    "./skills/chinese-essay-scaffolder/SKILL.md"
+  ]
+}

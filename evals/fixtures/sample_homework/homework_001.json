@@ -1,0 +1,47 @@
+{
+  "homework_id": "hw_001",
+  "student_id": "stu_001",
+  "chapter_id": "ch01_s05",
+  "submitted_at": "2026-06-07T08:00:00Z",
+  "questions": [
+    {
+      "id": "q01",
+      "stem": "下列各数中，是负数的是（   ）",
+      "options": ["A. -(-3)", "B. |-2|", "C. -3²", "D. 0"],
+      "student_answer": "A",
+      "correct_answer": "C"
+    },
+    {
+      "id": "q02",
+      "stem": "计算 (-5) + 3 = ?",
+      "student_answer": "-2",
+      "correct_answer": "-2"
+    },
+    {
+      "id": "q03",
+      "stem": "计算 (-3) + 5 - (-2) = ?",
+      "student_answer": "0",
+      "correct_answer": "4"
+    },
+    {
+      "id": "q04",
+      "stem": "计算 7 - (-3) = ?",
+      "student_answer": "4",
+      "correct_answer": "10"
+    }
+  ],
+  "expected_diagnosis": {
+    "wrong_questions": ["q01", "q03", "q04"],
+    "main_error_types": {
+      "q01": "concept_error",
+      "q03": "concept_error",
+      "q04": "concept_error"
+    },
+    "weak_kps": ["有理数加减法符号法则", "幂的符号"],
+    "misconception_matches": {
+      "q01": "MIS-MATH-7-002",
+      "q03": "MIS-MATH-7-001",
+      "q04": "MIS-MATH-7-001"
+    }
+  }
+}

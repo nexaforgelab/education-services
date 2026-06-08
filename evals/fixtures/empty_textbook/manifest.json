@@ -1,0 +1,14 @@
+{
+  "textbook_id": "empty_textbook_001",
+  "title": "空教材测试",
+  "subject": "math",
+  "grade": "7",
+  "version": "测试版",
+  "publisher": "测试出版社",
+  "edition_year": 2024,
+  "total_pages": 0,
+  "file_hash": "sha256:empty",
+  "ingested_at": "2026-06-07T10:00:00Z",
+  "chapters": [],
+  "warning": "教材内容为空，无法解析任何章节"
+}

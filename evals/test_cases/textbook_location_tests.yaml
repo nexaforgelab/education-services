@@ -1,0 +1,22 @@
+id: textbook_location_test_001
+name: 教材定位准确率测试
+description: |
+  测试 Agent 能否正确找到章节对应页码。
+  输入：询问"有理数加减法在哪一页"。
+  期望：返回正确页码区间。
+
+category: textbook_location
+fixture: evals/fixtures/sample_outputs/explain_to_parent.md
+
+input:
+  command: /explain-to-parent
+  args: ["有理数 加法"]
+
+expected:
+  page_range_approx: [15, 25]  # 期望页码区间
+  chapter_id: "ch01_s05"
+
+checks:
+  check_citation: true
+
+severity: high

@@ -1,0 +1,36 @@
+# Code Owners
+# Each line is a file pattern followed by one or more owners.
+# Order: Later owners take precedence over earlier ones.
+#
+# Docs: https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners
+
+# Default owners for everything
+*       @education-services/maintainers
+
+# Plugins
+/plugins/vertical-plugins/education-core/    @education-services/maintainers
+/plugins/vertical-plugins/subject-math/      @education-services/maintainers
+/plugins/vertical-plugins/subject-english/   @education-services/maintainers
+/plugins/vertical-plugins/subject-chinese/   @education-services/maintainers
+/plugins/vertical-plugins/subject-science/   @education-services/maintainers
+/plugins/vertical-plugins/teacher-workflow/  @education-services/maintainers
+/plugins/vertical-plugins/parent-workflow/   @education-services/maintainers
+
+# Agent plugins
+/plugins/agent-plugins/textbook-teaching-agent/  @education-services/maintainers
+/plugins/agent-plugins/lesson-planner-agent/     @education-services/maintainers
+/plugins/agent-plugins/homework-diagnosis-agent/ @education-services/maintainers
+/plugins/agent-plugins/unit-review-agent/        @education-services/maintainers
+/plugins/agent-plugins/parent-coach-agent/       @education-services/maintainers
+
+# Managed Agent Cookbooks
+/managed-agent-cookbooks/   @education-services/maintainers
+
+# Backend
+/backend/                   @education-services/maintainers
+
+# Scripts
+/scripts/                   @education-services/maintainers
+
+# CI / CD
+/.github/                   @education-services/maintainers

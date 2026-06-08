@@ -1,0 +1,150 @@
+name: 📚 Submit a Skill
+description: Submit a new Skill to the project
+title: "[Skill]: "
+labels: ["skill", "contribution"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Skills are reusable Markdown knowledge bases that agents dynamically load.
+        Each Skill is a `SKILL.md` file in a vertical plugin.
+
+  - type: input
+    id: skill_name
+    attributes:
+      label: Skill Name (kebab-case)
+      description: e.g. "math-stepwise-socratic-tutor"
+      placeholder: "my-new-skill"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: plugin
+    attributes:
+      label: Target Plugin
+      description: Which vertical plugin should this skill belong to?
+      options:
+        - education-core
+        - subject-math
+        - subject-chinese
+        - subject-english
+        - subject-science
+        - teacher-workflow
+        - parent-workflow
+        - New plugin (describe in description)
+    validations:
+      required: true
+
+  - type: dropdown
+    id: audience
+    attributes:
+      label: Audience
+      description: Who is this skill for?
+      options:
+        - Teacher
+        - Parent
+        - Student
+        - Multiple
+    validations:
+      required: true
+
+  - type: dropdown
+    id: subject
+    attributes:
+      label: Subject Area
+      description: What subject does this skill apply to?
+      options:
+        - Math
+        - Chinese
+        - English
+        - Science (Physics / Chemistry / Biology)
+        - History
+        - Geography
+        - General / Multi-subject
+        - Pedagogy / Methodology (not subject-specific)
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Skill Description
+      description: One-sentence description of what the skill does.
+      placeholder: "A step-by-step Socratic tutor for solving math word problems by guiding students with questions instead of giving answers."
+    validations:
+      required: true
+      maxLength: 280
+
+  - type: textarea
+    id: trigger
+    attributes:
+      label: When should this skill be triggered?
+      description: List specific scenarios where this skill should be loaded.
+      placeholder: |
+        - When student asks "怎么做这道应用题"
+        - When homework analysis reveals word-problem difficulty
+        - When parent requests tutoring script for a math concept
+    validations:
+      required: true
+
+  - type: textarea
+    id: methodology
+    attributes:
+      label: Methodology
+      description: Briefly describe the approach / framework.
+      placeholder: |
+        1. Read the problem aloud
+        2. Ask: "What do we know?"
+        3. Ask: "What do we want to find?"
+        4. ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: guardrails
+    attributes:
+      label: Guardrails
+      description: What should the agent NOT do when using this skill?
+      placeholder: |
+        - Do not give the final answer
+        - Do not do the arithmetic for the student
+        - Always reference textbook page numbers
+    validations:
+      required: true
+
+  - type: input
+    id: path
+    attributes:
+      label: File Path
+      description: Path to your SKILL.md file (e.g. in a PR)
+      placeholder: "plugins/vertical-plugins/subject-math/skills/my-skill/SKILL.md"
+    validations:
+      required: true
+
+  - type: input
+    id: pr_link
+    attributes:
+      label: Pull Request
+      description: Link to the PR containing this skill (if submitted)
+      placeholder: "#123"
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Skill Submission Checklist
+      options:
+        - label: I have included frontmatter (name, description, audience, subject)
+          required: true
+        - label: My SKILL.md follows the template in CONTRIBUTING.md
+          required: true
+        - label: I have included "Guardrails" section
+          required: true
+        - label: I have included at least one example
+          required: true
+        - label: I have run `python scripts/validate.py` and it passes
+          required: true
+        - label: I have updated the plugin's `plugin.json` to reference this skill
+          required: true

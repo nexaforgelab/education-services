@@ -1,0 +1,25 @@
+{
+  "name": "lesson-planner-agent",
+  "version": "0.1.0",
+  "description": "教师备课 Agent。从教材章节生成 45/60/90 分钟完整教案、板书、提问链、分层任务和作业。教师拿到即可上课。",
+  "author": {
+    "name": "Education Services Team",
+    "email": "team@education-services.local"
+  },
+  "homepage": "../../../README.md",
+  "license": "Apache-2.0",
+  "keywords": [
+    "education",
+    "lesson-plan",
+    "teacher",
+    "备课"
+  ],
+  "agents": [
+    "./agents/lesson-planner-agent.md"
+  ],
+  "depends_on": [
+    "../../agent-plugins/textbook-teaching-agent",
+    "../../vertical-plugins/education-core",
+    "../../vertical-plugins/teacher-workflow"
+  ]
+}

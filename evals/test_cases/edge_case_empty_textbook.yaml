@@ -1,0 +1,25 @@
+id: edge_case_empty_textbook
+name: 空教材处理测试
+description: |
+  测试 Agent 在教材没有内容时怎么处理。
+  场景：教材 PDF 为空 / 没有可解析内容。
+
+category: edge_case
+fixture: evals/fixtures/empty_textbook/manifest.json
+
+input:
+  command: /lesson-plan
+  args: ["任意章节", "45", "中等"]
+
+expected:
+  must_contain:
+    - "教材内容为空"  # 或类似
+    - "无法生成"
+  must_not_contain:
+    - "教材上明确说"  # 不应编造
+
+check_citation: false
+check_no_unsourced: true
+check_no_personal_judgments: true
+
+severity: medium

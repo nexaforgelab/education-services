@@ -1,0 +1,25 @@
+{
+  "name": "subject-math",
+  "version": "0.1.0",
+  "description": "数学科目 vertical plugin：数学概念解释、误区库、苏格拉底式提问、出题、批改、应用题构建。",
+  "author": {
+    "name": "Education Services Team",
+    "email": "team@education-services.local"
+  },
+  "homepage": "../../../README.md",
+  "license": "Apache-2.0",
+  "keywords": [
+    "education",
+    "subject",
+    "math",
+    "数学"
+  ],
+  "skills": [
+    "./skills/math-concept-explainer/SKILL.md",
+    "./skills/math-stepwise-socratic-tutor/SKILL.md",
+    "./skills/math-misconception-diagnoser/SKILL.md",
+    "./skills/math-example-generator/SKILL.md",
+    "./skills/math-rubric-grader/SKILL.md",
+    "./skills/math-word-problem-builder/SKILL.md"
+  ]
+}

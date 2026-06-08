@@ -1,0 +1,28 @@
+id: citation_test_001
+name: 教材引用规范测试
+description: |
+  测试 Agent 输出是否规范引用教材页码。
+  输入：要求备课有理数加减法。
+  期望：每个例题都标了页码。
+
+category: citation
+fixture: evals/fixtures/sample_outputs/lesson_plan.md
+
+input:
+  command: /lesson-plan
+  args: ["有理数加减法", "45", "中等"]
+
+expected:
+  must_contain:
+    - "教材 p."
+    - "第 1 章"  # 或具体章节
+  must_not_contain:
+    - "教材上明确说"
+    - "教材中提到"
+    - "教材认为"
+
+checks:
+  check_citation: true
+  check_no_unsourced: true
+
+severity: high

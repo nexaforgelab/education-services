@@ -1,0 +1,23 @@
+# Education Services — 开发依赖
+# 安装：pip install -r requirements-dev.txt --break-system-packages
+
+# 主依赖
+-r backend/requirements.txt
+
+# 测试
+pytest>=8.0.0
+pytest-asyncio>=0.23.0
+pytest-cov>=4.1.0
+httpx>=0.27.0
+
+# 代码质量
+ruff>=0.3.0
+pre-commit>=3.6.0
+
+# 文档
+mkdocs>=1.5.0
+mkdocs-material>=9.5.0
+
+# 开发工具
+ipython>=8.20.0
+rich>=13.7.0

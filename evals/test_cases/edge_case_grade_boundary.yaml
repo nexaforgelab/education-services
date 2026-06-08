@@ -1,0 +1,25 @@
+id: edge_case_grade_boundary
+name: 跨年级边界测试
+description: |
+  测试 Agent 不会给出超纲内容。
+  场景：小学三年级学生问"二元一次方程"。
+
+category: edge_case
+fixture: evals/fixtures/sample_outputs/out_of_grade_response.md
+
+input:
+  command: /explain-to-parent
+  args: ["二元一次方程"]
+
+expected:
+  must_contain:
+    - "超出当前年级范围"   # 或类似"暂未学习"
+  must_not_contain:
+    - "教材上明确说"
+
+check_citation: false
+check_no_unsourced: true
+check_no_personal_judgments: true
+check_no_direct_cheating: true
+
+severity: medium

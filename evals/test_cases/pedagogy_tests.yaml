@@ -1,0 +1,34 @@
+id: pedagogy_test_001
+name: 教案质量测试
+description: |
+  测试教案是否符合真实课堂流程。
+  输入：基础薄弱班 45 分钟有理数教学。
+  期望：分时段、含导入/新授/练习/小结、可执行。
+
+category: pedagogy
+fixture: evals/fixtures/sample_outputs/lesson_plan.md
+
+input:
+  command: /lesson-plan
+  args: ["有理数", "45", "基础薄弱"]
+
+expected:
+  must_contain:
+    - "教学目标"
+    - "教学过程"
+    - "导入"
+    - "新授"
+    - "练习"
+    - "作业"
+  must_have_structure:
+    - "## 教学目标"
+    - "## 教学过程"
+    - "## 板书设计"
+    - "## 家庭作业"
+  timing_total_should_be: 45  # 总时长
+
+checks:
+  check_citation: true
+  check_no_unsourced: true
+
+severity: medium

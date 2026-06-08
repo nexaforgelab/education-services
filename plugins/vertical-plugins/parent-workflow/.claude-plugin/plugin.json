@@ -1,0 +1,27 @@
+{
+  "name": "parent-workflow",
+  "version": "0.1.0",
+  "description": "家长工作流 vertical plugin：把教研员语言翻译成家长语言，家庭辅导脚本、激励、学习环境、考试焦虑、习惯培养、家长会准备。",
+  "author": {
+    "name": "Education Services Team",
+    "email": "team@education-services.local"
+  },
+  "homepage": "../../../README.md",
+  "license": "Apache-2.0",
+  "keywords": [
+    "education",
+    "parent",
+    "home-coaching",
+    "家庭辅导"
+  ],
+  "skills": [
+    "./skills/parent-friendly-explanation/SKILL.md",
+    "./skills/home-coaching-script/SKILL.md",
+    "./skills/child-motivation-guidance/SKILL.md",
+    "./skills/weekly-plan-builder/SKILL.md",
+    "./skills/learning-environment-setup/SKILL.md",
+    "./skills/test-anxiety-support/SKILL.md",
+    "./skills/study-habit-builder/SKILL.md",
+    "./skills/parent-teacher-meeting-prep/SKILL.md"
+  ]
+}

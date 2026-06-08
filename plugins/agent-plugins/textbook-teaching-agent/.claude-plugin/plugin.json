@@ -1,0 +1,36 @@
+{
+  "name": "textbook-teaching-agent",
+  "version": "0.1.0",
+  "description": "教材驱动的教师/家长辅导 Agent，根据用户提供的教材 PDF、章节、学生水平和辅导目标，生成教案、讲解脚本、练习、错因诊断和家长沟通报告。",
+  "author": {
+    "name": "Education Services Team",
+    "email": "team@education-services.local"
+  },
+  "homepage": "../../../README.md",
+  "license": "Apache-2.0",
+  "keywords": [
+    "education",
+    "textbook",
+    "teacher",
+    "parent",
+    "tutoring",
+    "agent",
+    "long-chain-workflow"
+  ],
+  "agents": [
+    "./agents/textbook-teaching-agent.md"
+  ],
+  "skills": [
+    "./skills/textbook-ingestion/SKILL.md",
+    "./skills/curriculum-mapper/SKILL.md",
+    "./skills/lesson-planner/SKILL.md",
+    "./skills/misconception-diagnoser/SKILL.md",
+    "./skills/worksheet-generator/SKILL.md",
+    "./skills/homework-reviewer/SKILL.md",
+    "./skills/parent-report-writer/SKILL.md"
+  ],
+  "depends_on": [
+    "../../vertical-plugins/education-core",
+    "../../vertical-plugins/subject-math"
+  ]
+}

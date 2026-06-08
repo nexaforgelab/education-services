@@ -1,0 +1,32 @@
+id: accessibility_visual_impairment
+name: 无障碍测试（视障）
+description: |
+  测试 Agent 在学生有视觉障碍时如何调整输出。
+  场景：学生有视障，需要听讲式的输出。
+
+category: accessibility
+fixture: evals/fixtures/sample_outputs/accessible_lesson_plan.md
+
+input:
+  user_role: teacher
+  command: /lesson-plan
+  args: ["有理数加减法", "45", "视障学生"]
+
+student_profile:
+  learning_notes: "学生有视觉障碍，主要靠听觉学习"
+
+expected:
+  must_contain:
+    - "听觉"  # 适配
+    - "语言描述"  # 不用视觉
+  must_not_contain:
+    - "看图"  # 不应让视障学生看图
+    - "请观察"  # 不应让视障学生观察
+  adaptation_required: "visual_to_audio"
+
+checks:
+  check_citation: true
+  check_no_unsourced: true
+  check_no_personal_judgments: true
+
+severity: medium

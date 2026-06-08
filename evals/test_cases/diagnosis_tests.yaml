@@ -1,0 +1,31 @@
+id: diagnosis_test_001
+name: 错因诊断准确率测试
+description: |
+  测试作业诊断 Agent 能否正确分类错因。
+  输入：学生作业含"减负数未变号"错误。
+  期望：识别为 concept_error，关联到符号法则知识点。
+
+category: diagnosis
+fixture: evals/fixtures/sample_outputs/diagnosis_report.md
+
+input:
+  command: /diagnose-homework
+  args: ["./samples/homework_001.jpg", "ch01_s05"]
+
+# 标准答案（错因分析）
+expected_diagnosis:
+  wrong_questions:
+    - question_id: "q03"
+      error_type: "concept_error"
+      knowledge_points: ["有理数加减法", "符号法则"]
+      misconception_match: "MIS-MATH-7-001"
+  weak_kps:
+    - "有理数加减法符号法则"
+
+checks:
+  check_citation: true
+  check_no_unsourced: true
+  check_no_personal_judgments: true
+  check_no_direct_cheating: true
+
+severity: high

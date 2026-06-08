@@ -1,0 +1,13 @@
+# Funding configuration for education-services
+# Show a sponsor button in your repository
+#
+# Docs: https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/displaying-a-sponsor-button-in-your-repository
+#
+# Replace with your own sponsorship platforms.
+
+github: [education-services]
+# patreon: your-patreon-handle
+# open_collective: your-open-collective-handle
+# ko_fi: your-kofi-handle
+# tidelift: npm/education-services
+# custom: ["https://example.com/sponsor"]

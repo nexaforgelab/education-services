@@ -1,0 +1,122 @@
+name: 🐛 Bug Report
+description: Report a bug to help us improve education-services
+title: "[Bug]: "
+labels: ["bug", "needs-triage"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this bug report!
+
+  - type: dropdown
+    id: component
+    attributes:
+      label: Which component is affected?
+      description: Select the area where you encountered the bug.
+      options:
+        - Plugin (vertical-plugins/*)
+        - Agent (agent-plugins/*)
+        - Skill (SKILL.md content)
+        - Slash Command
+        - Backend API
+        - Database / Migration
+        - Eval / Test
+        - Documentation
+        - Installation / Deployment
+        - MCP Server
+        - Other
+    validations:
+      required: true
+
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Severity
+      description: How severe is this bug?
+      options:
+        - "🔴 Critical: blocks core functionality"
+        - "🟠 High: major feature broken"
+        - "🟡 Medium: minor feature broken"
+        - "🟢 Low: cosmetic or minor"
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Bug Description
+      description: A clear and concise description of what the bug is.
+      placeholder: |
+        What happened? What did you expect to happen?
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps to Reproduce
+      description: Steps to reproduce the behavior.
+      placeholder: |
+        1. Install education-services
+        2. Run command '...'
+        3. See error
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected Behavior
+      description: What did you expect to happen?
+    validations:
+      required: false
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual Behavior
+      description: What actually happened?
+    validations:
+      required: false
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant Log Output
+      description: Please copy and paste any relevant log output.
+      render: shell
+    validations:
+      required: false
+
+  - type: input
+    id: version
+    attributes:
+      label: Version
+      description: What version of education-services are you running?
+      placeholder: "0.1.0"
+    validations:
+      required: true
+
+  - type: input
+    id: environment
+    attributes:
+      label: Environment
+      description: OS, Python version, Docker version, etc.
+      placeholder: "macOS 14, Python 3.11.4, Docker 24.0.7"
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Pre-submission Checklist
+      options:
+        - label: I have searched the existing issues and this is not a duplicate
+          required: true
+        - label: I have read the documentation ([README.md](README.md), [docs/](docs/))
+          required: true
+        - label: I have run `python scripts/validate.py` and included any relevant output
+          required: false
+        - label: I can reproduce this bug with the latest version
+          required: true
