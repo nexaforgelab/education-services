@@ -15,7 +15,7 @@ alembic>=1.13.0
 pgvector>=0.2.4
 
 # PDF processing
-pymupdf>=1.24.0
+pymupdf>=1.27.2.3
 paddlepaddle>=2.6.0
 paddleocr>=2.7.0
 
