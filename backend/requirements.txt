@@ -20,7 +20,7 @@ paddlepaddle>=2.6.0
 paddleocr>=2.7.0
 
 # ML
-sentence-transformers>=2.3.0
+sentence-transformers>=5.5.1
 torch>=2.1.0
 
 # Storage
