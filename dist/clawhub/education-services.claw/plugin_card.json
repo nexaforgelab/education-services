@@ -1,0 +1,112 @@
+{
+  "schema_version": "clawhub/1.0",
+  "name": "education-services",
+  "display_name": "Education Services — 教材驱动辅导",
+  "version": "0.1.0",
+  "publisher": "education-services-team",
+  "license": "Apache-2.0",
+
+  "summary": "基于 Claude 大模型 + 教材 PDF 的教师/家长辅导 Agent 套件。包含 5 个核心 Agent、56 个 Skill、7 个 Subagent、5 个 MCP 数据源。所有输出可回溯到教材具体页码。",
+  "description_markdown": "## 适用场景\n- 教师备课（45/60/90 分钟教案，含板书/提问链/分层作业）\n- 作业诊断（错因分类 + 一对一讲解 + 变式题）\n- 家长陪学（把教师语言翻译成「人话」给家长用）\n- 单元复习（知识网络 + 高频考点 + 易错点）\n\n## 内置护栏\n- 教材引用：所有结论必须能回溯到具体页码\n- 不替学生作弊：优先启发式提示\n- 隐私保护：学生数据不进入外部训练\n- Prompt Injection 防御\n- 专业边界（心理/医疗转介）\n\n## 工作模式\n- OpenClaw 模式：本地 Cowork 式交互\n- Managed Agent 模式（通过 MCP 接入 Hermes / Managed Agents API）",
+
+  "categories": ["education", "teaching", "parenting", "k12"],
+  "languages": ["zh-CN", "en-US"],
+  "audience": ["teacher", "parent", "school-admin"],
+
+  "requirements": {
+    "openclaw_version": ">=2.3.0",
+    "platforms": ["macos", "linux", "windows"],
+    "runtimes": [
+      { "name": "python", "min_version": "3.10" },
+      { "name": "postgresql+pgvector", "min_version": "16" },
+      { "name": "node", "min_version": "20", "optional": true }
+    ],
+    "external_apis": [
+      { "name": "Anthropic Claude API", "env": "ANTHROPIC_API_KEY", "required": true }
+    ]
+  },
+
+  "install": {
+    "type": "local-bundle",
+    "entry": "education-services.openclaw",
+    "path": ".",
+    "assets": [
+      "plugins/",
+      "managed-agent-cookbooks/",
+      "scripts/",
+      "backend/",
+      "evals/",
+      ".env.example"
+    ],
+    "skills_dir": "plugins/vertical-plugins",
+    "agents_dir": "plugins/agent-plugins",
+    "cookbooks_dir": "managed-agent-cookbooks"
+  },
+
+  "skills": {
+    "count": 56,
+    "entry": [
+      "education-core",
+      "subject-math",
+      "subject-chinese",
+      "subject-english",
+      "subject-science",
+      "teacher-workflow",
+      "parent-workflow"
+    ]
+  },
+
+  "agents": {
+    "count": 5,
+    "list": [
+      "textbook-teaching-agent",
+      "lesson-planner-agent",
+      "homework-diagnosis-agent",
+      "unit-review-agent",
+      "parent-coach-agent"
+    ]
+  },
+
+  "commands": [
+    "/ingest-textbook",
+    "/lesson-plan",
+    "/diagnose-homework",
+    "/explain-to-parent",
+    "/worksheet",
+    "/unit-review",
+    "/parent-report"
+  ],
+
+  "mcp_servers": [
+    "textbook_store",
+    "vector_index",
+    "student_profile",
+    "homework_store",
+    "question_bank"
+  ],
+
+  "guardrails_declared": [
+    "citation-required",
+    "no-cheating",
+    "privacy",
+    "no-prompt-injection",
+    "professional-boundary"
+  ],
+
+  "skill_spector_scan": {
+    "passed": true,
+    "scanned_at": "2026-06-08T00:00:00Z",
+    "no_hidden_instructions": true,
+    "no_obfuscated_payloads": true,
+    "no_pii_collection": true,
+    "notes": "已通过 SkillSpector 扫描。56 个 SKILL.md 全部为 Markdown 知识库，无可执行代码、无网络外发、无隐藏 prompt。"
+  },
+
+  "icons": {
+    "small": "assets/icon_32.png",
+    "large": "assets/icon_256.png"
+  },
+
+  "homepage": "https://github.com/education-services/education-services",
+  "support": "https://github.com/education-services/education-services/issues"
+}

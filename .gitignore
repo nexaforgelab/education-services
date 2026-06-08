@@ -6,7 +6,12 @@ __pycache__/
 .Python
 build/
 develop-eggs/
-dist/
+# dist/ is normally the Python distribution folder (sdist).
+# But this project also has a custom dist/ subfolder with ClawHub/Hermes packages.
+# Allow-list our custom dist contents via negation below.
+dist/*.tar.gz
+dist/*.whl
+dist/*.egg-info
 downloads/
 eggs/
 .eggs/

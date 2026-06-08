@@ -1,0 +1,94 @@
+{
+  "name": "education-services",
+  "version": "0.1.0",
+  "type": "openclaw-bundle",
+  "schema_version": "openclaw/2.3",
+  "publisher": "education-services-team",
+
+  "runtime": {
+    "primary": "python-3.11",
+    "entrypoint": "scripts/run_agent_real.py",
+    "config_files": [
+      ".env",
+      "managed-agent-cookbooks/textbook-teaching-agent/agent.yaml"
+    ]
+  },
+
+  "skills_root": "plugins/vertical-plugins",
+  "agents_root": "plugins/agent-plugins",
+  "commands_root": "plugins/vertical-plugins/education-core/commands",
+
+  "mcp_config": "plugins/vertical-plugins/education-core/.mcp.json",
+  "cookbooks_root": "managed-agent-cookbooks",
+
+  "preflight": {
+    "checks": [
+      {
+        "name": "anthropic_api_key",
+        "type": "env",
+        "var": "ANTHROPIC_API_KEY",
+        "required": true,
+        "error_message": "请先设置 ANTHROPIC_API_KEY：export ANTHROPIC_API_KEY=sk-ant-..."
+      },
+      {
+        "name": "database_url",
+        "type": "env",
+        "var": "DATABASE_URL",
+        "required": true,
+        "error_message": "请先启动 PostgreSQL+pgvector 并设置 DATABASE_URL"
+      },
+      {
+        "name": "pymupdf",
+        "type": "python-import",
+        "module": "fitz",
+        "error_message": "请安装 PyMuPDF: pip install pymupdf --break-system-packages"
+      }
+    ]
+  },
+
+  "commands_registration": [
+    {
+      "name": "ingest-textbook",
+      "path": "plugins/vertical-plugins/education-core/commands/ingest-textbook.md",
+      "permission_scope": ["teacher", "admin"]
+    },
+    {
+      "name": "lesson-plan",
+      "path": "plugins/vertical-plugins/education-core/commands/lesson-plan.md",
+      "permission_scope": ["teacher", "admin"]
+    },
+    {
+      "name": "diagnose-homework",
+      "path": "plugins/vertical-plugins/education-core/commands/diagnose-homework.md",
+      "permission_scope": ["teacher", "parent", "admin"]
+    },
+    {
+      "name": "explain-to-parent",
+      "path": "plugins/vertical-plugins/education-core/commands/explain-to-parent.md",
+      "permission_scope": ["teacher", "parent"]
+    },
+    {
+      "name": "worksheet",
+      "path": "plugins/vertical-plugins/education-core/commands/worksheet.md",
+      "permission_scope": ["teacher"]
+    },
+    {
+      "name": "unit-review",
+      "path": "plugins/vertical-plugins/education-core/commands/unit-review.md",
+      "permission_scope": ["teacher", "student"]
+    },
+    {
+      "name": "parent-report",
+      "path": "plugins/vertical-plugins/education-core/commands/parent-report.md",
+      "permission_scope": ["teacher", "parent"]
+    }
+  ],
+
+  "telemetry_opt_in": false,
+
+  "support": {
+    "homepage": "https://github.com/education-services/education-services",
+    "issues": "https://github.com/education-services/education-services/issues",
+    "email": "team@education-services.local"
+  }
+}
