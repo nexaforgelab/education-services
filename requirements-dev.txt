@@ -5,19 +5,19 @@
 -r backend/requirements.txt
 
 # 测试
-pytest>=8.0.0
-pytest-asyncio>=0.23.0
-pytest-cov>=4.1.0
+pytest>=9.0.3
+pytest-asyncio>=1.4.0
+pytest-cov>=7.1.0
 httpx>=0.27.0
 
 # 代码质量
-ruff>=0.3.0
-pre-commit>=3.6.0
+ruff>=0.15.16
+pre-commit>=4.6.0
 
 # 文档
-mkdocs>=1.5.0
-mkdocs-material>=9.5.0
+mkdocs>=1.6.1
+mkdocs-material>=9.7.6
 
 # 开发工具
-ipython>=8.20.0
-rich>=13.7.0
+ipython>=9.14.1
+rich>=15.0.0
